@@ -1,18 +1,25 @@
-import { Router } from 'express';
-import './App.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Log from './src/login.jsx';
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import CarInfo from "./pages/CarInfo";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+
+import Create from "./pages/Admin/Create";
 
 function App() {
   return (
     <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Log/>} />
-    
- </Routes>
-    
+    <Navbar/>
+      <Routes>
+        <Route element={<Home/>} path="/" />
+        <Route element={<Contact/>} path="/contact" />
+        <Route path="/car/:id" element={<CarInfo/>}/>
+       
+        <Route path="/admin/addcar" element={<Create/>}/>
+        <Route element={<p>404 Not Found</p>} path="*"/>
+      </Routes>
     </BrowserRouter>
-
   );
 }
 

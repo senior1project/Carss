@@ -1,0 +1,40 @@
+.card{
+    height: 300px;
+    width: 250px;
+    position: relative;
+    border-radius: 15px;
+    border: 3px solid #f73434;
+    overflow: hidden;
+    margin: 15px;
+}
+.card-image{
+position:absolute;
+height: 200px;
+width: 100%;
+top: 0;
+left: 0;
+object-fit: cover;
+}
+.card-text{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 200px;
+    left: 0; text-align: center;
+}
+.card-text .title{
+    font-size: 18px;
+    font-weight: 900;
+}
+.card-text .price{
+   font-size:16px ;
+   padding-top: 15px;
+}
+
+
+.color-carCard{
+    height: 30px;
+    width: 30px;
+    
+    border: 3px solid black;
+}

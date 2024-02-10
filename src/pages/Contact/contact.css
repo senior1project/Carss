@@ -1,0 +1,21 @@
+.container-contact{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc( 80vh - 60px);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-contact table{
+    width: 60%;
+}
+
+.container-contact th {
+    color:#f73a34 ;
+    
+}
+.container-contact td {
+    text-align: center;
+    padding: 15px;
+}

@@ -1,0 +1,56 @@
+.container-landing {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.landing-img {
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+
+.description {
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  z-index: 100;
+  font-weight: 800;
+  color: #e8e8e8;
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  background-color: #98cbe98f;
+  border-radius: 30px;
+  font-size: 25px;
+}
+
+.description span {
+  color: #f73a34;
+}
+
+.search {
+  display: flex;
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  z-index: 100;
+  width: 300px;
+  height: 255px;
+  border-radius: 30px;
+  background-color: rgba(20, 20, 20, 0.8);
+  text-align: center;
+  color: #e8e8e8;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.search input {
+  height: 33px;
+  border-radius: 16px;
+  padding: 0 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
