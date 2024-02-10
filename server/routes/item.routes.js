@@ -1,29 +1,21 @@
-/*const router = require('express').Router();
-const itemController = require("../controllers/item.controller");
-const {get,post,deletee,put} = require("../controllers/itemController.js");
-
-
-/////Router CRUD with jwt/////////
-router.get('/cars',authentication,get)
-router.post('/cars',authentication,post)
-router.delete('/cars/:id', authentication,deletee)
-router.put('/cars/:id',authentication,put)
-module.exports = router;*/
 const router = require('express').Router();
-const controller = require("../controllers/item.controller");
-const {authentication} = require('../../server/Authentication/authentication.js') 
+const controller = require('../controllers/index');
+const { authenticateToken } =require('../middlewear/token')
 
 
 
-
+router.post('/signup', controller.signup);
+router.post('/signin', controller.signin);
 router.post('/addCar', controller.ADDONE);
 router.delete('/delete/:id', controller.DELETEONE);
 router.put('/update/:id', controller.UPDATEONE);
 router.get('/getAll', controller.FINDALL);
 router.get('/getOne/:brand', controller.FINDONE);
-router.delete('/del/:id', controller.DELETEResrvation);
-router.put('/updatee/:id', controller.UpdateReservation);
-router.post('/addReserv', controller.Makereservation);
+router.get('/getId/:id', controller.FINDID);
+router.post('/rent', controller.RENTONE);    // for car rent input ={start_date : ,end_date : ,total : (days*day_price)}
+router.get('/rents', controller.RENTS);    // to get all cars  rents     
+
+
 
 
 
