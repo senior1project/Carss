@@ -63,7 +63,7 @@ const car = require('../database-mysql/indexx');
 const {authentication} = require('../../server/Authentication/authentication.js') 
 const secretKey = process.env.JWT_SECRET || '123456789';
 
-
+//res.json({ token,username });add username in sign in function
 
 const FINDALL=(req,res)=>{
   car.findAll((err, results)=>{
