@@ -74,7 +74,7 @@ const FINDONE = (req,res)=>{
         console.log('found : ', results)
         res.json(results);
     }
-}))
+
 }
 const FINDID = (req,res)=>{
   let id = req.params.id
