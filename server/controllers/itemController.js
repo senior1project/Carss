@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const userModel = require('../database-mysql/index');
-const { authenticateToken } = require('../middlewear/token'); 
+const { authenticateToken } = require('../'); 
 const secretKey = process.env.JWT_SECRET || '123456789';
 
 const signup = async (req, res) => {

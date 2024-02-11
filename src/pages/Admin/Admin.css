@@ -1,0 +1,293 @@
+.car-nav {
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Francois One", sans-serif;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .car-nav {
+    cursor: pointer;
+  }
+  
+  .nav-selected {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 1.1em;
+  }
+  
+  .nav-unselected {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 1.1em;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 30.5px;
+    font-weight: bold;
+  
+    color: white;
+  }
+  
+  .cart {
+    background-color: black;
+    padding: 30px;
+    border: 1px solid #0a0909;
+    border-radius: 5px;
+    width: 350px;
+    margin-left: -20%;
+    margin-top: 10%;
+    border-radius: 0.9em;
+  }
+  
+  .container {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap: 20px;
+  }
+  
+  .img {
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    cursor: pointer;
+    background-color: black;
+    padding: 40px 90px;
+    border-radius: 40px;
+    height: 200px;
+    width: 200px;
+    transition: transform 0.3s ease;
+    margin-left: -20px;
+  }
+  
+  .img {
+    width: 200px;
+    height: 300px;
+    padding: -3px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .img:hover {
+    transform: scale(1.5);
+  }
+  
+  .cares-list-item-names {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .cares-list-item-staff {
+    padding-left: 16px;
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .create {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 150px 25px 0;
+    gap: 15px;
+  }
+  
+  .input-add {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .update-input {
+    text-align: center;
+    margin-left: 15px;
+  }
+  
+  .button {
+    margin: 0.5em;
+    background: black;
+    color: rgb(168, 2, 2);
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-left: 525%;
+    height: 30.5px;
+    width: 80px;
+  }
+  
+  .button {
+    padding: 1px;
+    border: unset;
+    border-radius: 15px;
+    color: red;
+    z-index: 1;
+    background: #1b1919;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+  
+  .btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0.5em;
+    background: black;
+    color: rgb(168, 2, 2);
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 50.5px;
+    width: 190px;
+  }
+  
+  .btn {
+    padding: 1px;
+    border: unset;
+    border-radius: 15px;
+    color: red;
+    z-index: 1;
+    background: #1b1919;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+  
+  .Search-button {
+    padding: 1px;
+    border: unset;
+    border-radius: 15px;
+    color: #efe1e1;
+    z-index: 1;
+    background: #1b1919;
+    position: relative;
+    font-weight: 1000;
+    font-size: 20.25px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .search[type="text"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+  
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 5px 5px 5px 5px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .search[type="text"]:focus {
+    width: 50%;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ffffff;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
+  
+  .btn-animate:hover {
+    color: #000000;
+  }
+  
+  .btn-animate:hover::before {
+    width: 100%;
+  }
+  
+  .car-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    transition: all 0.5s
+  }
+  
+  .car-card:hover {
+    transform: scale(1.05)
+  }
+  
+  .car-card-img {
+    max-width: 250px;
+    aspect-ratio: 4/3;
+  }
+  
+  dialog {
+    z-index: 10;
+    margin-top: 10px;
+    background: #eee;
+    border: none;
+    border-radius: 1rem;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    width: 90%;
+    margin: 0 auto
+  }
+  
+  dialog::backdrop {
+    background-color: #000;
+    opacity: 0.5
+  }
+  
+  .dialogForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
+  }

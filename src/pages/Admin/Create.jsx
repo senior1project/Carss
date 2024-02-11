@@ -56,36 +56,32 @@ const Create = ({ setRefresh, refresh, changeView }) => {
   };
 
   return (
-    <div className="create">
-      <ul>
+    <div>
+      <div className="create">
         <input
           className="input-add"
           type="text"
           placeholder="Model"
           onChange={(e) => setModel(e.target.value)}
         />
-
         <input
           className="input-add"
           type="text"
           placeholder="Year"
           onChange={(e) => setYear(e.target.value)}
         />
-
         <input
           className="input-add"
           type="text"
           placeholder="Brand"
           onChange={(e) => setBrand(e.target.value)}
         />
-
         <input
           className="input-add"
           type="text"
           placeholder="Price_day"
           onChange={(e) => setPrice_day(e.target.value)}
         />
-
         <input
           className="input-add"
           type="color"
@@ -98,16 +94,13 @@ const Create = ({ setRefresh, refresh, changeView }) => {
           placeholder="Image"
           onChange={handleFileChange}
         />
-        {image && (
-          <img height={80} src={URL.createObjectURL(image.get("images"))} alt="Uploaded" />
-        )}
-
-        <button onClick={() => add()} className="btn">
-          add
-        </button>
-      </ul>
+      </div>
+      <button onClick={() => add()} className="btn btn-animate">
+        add
+      </button>
     </div>
   );
 };
 
 export default Create;
+

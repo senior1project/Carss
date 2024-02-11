@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const controller = require('../controllers/index');
+const controller = require('../controllers/itemController.js');
 const { authenticateToken } =require('../middlewear/token')
 
 
