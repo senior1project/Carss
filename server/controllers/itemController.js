@@ -1,7 +1,13 @@
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const fs = require("fs");
+const asyncHandler = require("express-async-handler");
+const {
+  cloudinaryUploadImg
+} = require("../utils/cloudinary");
+const jwt = require('jsonwebtoken'); 
 const userModel = require('../database-mysql/index');
 const { authenticateToken } = require('../middlewear/token'); 
+const { url } = require('inspector');
 const secretKey = process.env.JWT_SECRET || '123456789';
 
 const signup = async (req, res) => {
@@ -95,6 +101,7 @@ const UPDATEONE = (req,res)=>{
   let id =  req.params.id
   userModel.updateCar(val,id,( (err, results) => {
     if (err) {
+      res.status(500).json({error:"error"})
         console.error('Error:', err);
     } else {
         console.log( results)
@@ -106,9 +113,11 @@ const UPDATEONE = (req,res)=>{
 const DELETEONE = (req,res)=>{
 
   let id = req.params.id
+  console.log(id);
   userModel.deleteCar(id,( (err, results) => {
     if (err) {
         console.error('Error:', err);
+        res.status(500).json({error:"error"})
     } else {
         console.log( results)
         res.json(results);
@@ -150,6 +159,33 @@ const RENTS = (req,res)=>{
     }
 })
 }
+const uploadImg = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  try {
+    const uploader = (path) => cloudinaryUploadImg(path, "images");
+    const urls = [];
+    const files = req.files;
+    for (const file of files) {
+      const { path } = file;
+      const newpath = await uploader(path);
+      urls.push(newpath);
+      fs.unlinkSync(path);
+    }
+    image = urls[0].url;
+      userModel.updateCar({image}, id, (err, results) => {
+        if (err) {
+          res.status(500).json({ error: "error" });
+          console.error("Error:", err);
+        } else {
+          console.log(results);
+          res.json(results);
+        }
+      });
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
 
 
 
@@ -168,5 +204,6 @@ module.exports = {
   FINDONE,
   FINDID,
   RENTONE,
-  RENTS
+  RENTS,
+  uploadImg,
 };

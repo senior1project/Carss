@@ -73,6 +73,7 @@ const deleteCar = (id,callback)=>{
 }
 
 
+
 const rentCar = (val,callback)=>{
     const sql = 'INSERT INTO  rental SET  ?'
     connection .query(sql,[val],(err, results) => {
