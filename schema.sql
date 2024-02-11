@@ -39,7 +39,6 @@ CREATE TABLE IF NOT EXISTS `Rental_cars`.`vehicle` (
   `price_day` INT NULL,
   `color` VARCHAR(45) NULL,
   `image` VARCHAR(255) NOT NULL,
-  `desc` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -62,13 +61,13 @@ CREATE TABLE IF NOT EXISTS `Rental_cars`.`rental` (
   CONSTRAINT `fk_rental_users`
     FOREIGN KEY (`users_id`)
     REFERENCES `Rental_cars`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_rental_vehicle1`
     FOREIGN KEY (`vehicle_id`)
     REFERENCES `Rental_cars`.`vehicle` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 

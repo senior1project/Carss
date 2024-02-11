@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({ 
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'eyajouini',
     database: 'Rental_cars'
 });
 
@@ -71,6 +71,7 @@ const deleteCar = (id,callback)=>{
     connection .query (sql,[id],(err, results) => {
         callback(err, results)})
 }
+
 
 
 const rentCar = (val,callback)=>{
