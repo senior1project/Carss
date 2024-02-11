@@ -1,22 +1,32 @@
-const express = require("express");
-//const itemRoutes = require('./routes/item.routes')
-const bodyParser = require('body-parser');
-//const { Sequelize, DataTypes } = require('sequelize');
-const jwt = require('jsonwebtoken');
-const cors= require("cors")
-const secretKey = process.env.JWT_SECRET || 123456789 ;
-
-
+const express = require("express");;
+const Routes = require('./routes/Routes');
+const db = require('./databse-pg/index');
+const cors = require('cors')
+const { authenticateToken } =require('./middlewear/token')
 const app = express();
-const PORT =3000
+const PORT = 3000
 
 app.use(cors())
 app.use(express.json());
-app.use(bodyParser.json())
+app.use('/',Routes);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + "/../client/dist"));
 
 
-//app.use("/", itemRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+
+app.listen(PORT, function () {
+  console.log("listening on port 3000!");
 });
+
+
+
+
+
+
+
+
+
+
+
+
